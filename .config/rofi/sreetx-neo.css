@@ -1,0 +1,72 @@
+/* ===================================================================
+   Wofi Style Sheet (Converted from Sreetx-Neo Rofi Theme)
+   =================================================================== */
+
+/* Jendela utama Wofi (Menggantikan window & * global) */
+window {
+    width: 35%;
+    font-family: sans-serif; /* Sesuaikan dengan font sistemmu jika perlu */
+    background-color: rgba(15, 15, 20, 0.75); /* Dark semi-transparan */
+    color: #E0E0E8; /* Teks utama terang */
+    border: 2px solid #86AAEC; /* Warna aksen biru/neon */
+    border-radius: 12px; /* Matching sama roundness Hyprland-mu */
+    padding: 20px;
+}
+
+/* Wadah luar setelah window (Menggantikan mainbox) */
+#outer-box {
+    padding: 0;
+    margin: 0;
+}
+
+/* Kotak input pencarian (Menggantikan inputbar & entry) */
+#input {
+    margin-bottom: 15px; /* Jarak antara inputbar dan listview */
+    background-color: rgba(30, 30, 40, 0.6); /* bg-alt */
+    border: 1px solid rgba(134, 170, 236, 0.3); /* border-color */
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: #E0E0E8;
+}
+
+/* Kustomisasi teks placeholder di dalam input */
+#input image {
+    color: #86AAEC; /* Mengubah warna ikon pencarian jika ada */
+}
+
+/* Wadah hasil pencarian (Menggantikan listview) */
+#inner-box {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* Setiap baris pilihan/item (Menggantikan element) */
+#entry {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+/* Efek saat kursor diarahkan ke item (Sesuai pengaturan hover-select: true) */
+#entry:hover {
+    background-color: rgba(30, 30, 40, 0.4);
+}
+
+/* Tampilan saat item disorot/dipilih (Menggantikan element selected) */
+#entry:selected {
+    background-color: #86AAEC; /* Menggunakan @accent-color */
+}
+
+/* Teks di dalam baris pilihan (Menggantikan element-text) */
+#text {
+    color: #E0E0E8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Teks otomatis berubah jadi gelap saat dipilih agar kontras */
+#entry:selected #text {
+    color: #0F0F14; 
+    font-weight: bold;
+}

@@ -1,0 +1,80 @@
+$S = SUPER
+
+# Apps & Features
+bind = $S, Return, exec, kitty
+bind = $S, T, exec, kitty
+bind = $S, Q, killactive, 
+bind = $S, E, exec, nautilus
+bind = $S, W, exec, google-chrome-stable
+bind = $S, ALT + Space, togglefloating, 
+bind = $S, X, exec, wofi --show drun
+bind = $S, P, pseudo, # dwindle
+bind = $S, period, exec, rofimoji
+bind = $S, comma, exec, cliphist
+bind = $S, SHIFT + S, exec, slurp
+bind = $S, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
+bind = $S, R, exec, QUICKSHELL_PRIVILEGED=1 QML_XHR_ALLOW_FILE_READ=1 quickshell --path ~/.config/Sreetx-Neo/component/Apps/Run.qml
+
+# --- MEDIA & VOLUME CONTROL (TERINTEGRASI QUICKSHELL) ---
+# Volume (F1 - F3)
+bind = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && notify-send -a "Volume" "0"
+bind = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && notify-send -a "Volume" "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)}')"
+bind = , XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && notify-send -a "Volume" "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)}')"
+
+# Brightness (F5 - F6)
+bind = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+bind = , XF86MonBrightnessUp, exec, brightnessctl set 5%+
+
+# --- WINDOW MANAGEMENT ---
+bind = $S, left, movefocus, l
+bind = $S, right, movefocus, r
+bind = $S, up, movefocus, u
+bind = $S, down, movefocus, d
+
+# Workspace Switching (1-10)
+bind = $S, 1, workspace, 1
+bind = $S, 2, workspace, 2
+bind = $S, 3, workspace, 3
+bind = $S, 4, workspace, 4
+bind = $S, 5, workspace, 5
+bind = $S, 6, workspace, 6
+bind = $S, 7, workspace, 7
+bind = $S, 8, workspace, 8
+bind = $S, 9, workspace, 9
+bind = $S, 0, workspace, 10
+
+# Move windows to another workspace
+bind = $S SHIFT, 1, movetoworkspace, 1
+bind = $S SHIFT, 2, movetoworkspace, 2
+bind = $S SHIFT, 3, movetoworkspace, 3
+bind = $S SHIFT, 4, movetoworkspace, 4 
+bind = $S SHIFT, 5, movetoworkspace, 5 
+bind = $S SHIFT, 6, movetoworkspace, 6 
+bind = $S SHIFT, 7, movetoworkspace, 7 
+bind = $S SHIFT, 8, movetoworkspace, 8 
+bind = $S SHIFT, 9, movetoworkspace, 9
+bind = $S SHIFT, 0, movetoworkspace, 10 
+
+# Window Groups
+bind = $S, G, togglegroup 
+bind = $S, D, togglespecialworkspace, adalahPokoknya
+
+# Workspace Move with Mouse scroll
+bind = $S, mouse_up, workspace, +1
+bind = $S, mouse_down, workspace, -1
+
+# Window Layout edit
+bindm = $S, mouse:272, movewindow
+bindm = $S, mouse:273, resizewindow
+bind = $S SHIFT, left, movewindow, l
+bind = $S SHIFT, right, movewindow, r
+bind = $S SHIFT, down, movewindow, d
+bind = $S SHIFT, up, movewindow, u
+bind = $S ALT, SPACE, togglefloating
+
+# Logout-Menu
+bind = $S SHIFT ALT, P, exec, systemctl poweroff
+bind = $S SHIFT ALT, R, exec, systemctl reboot
+bind = $S SHIFT ALT, L, exit,
+
+
