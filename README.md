@@ -4,7 +4,6 @@ Status: Pre-Alpha Release
 
 [!Sreetx Neo Pre Alpha Release Preview](https://youtu.be/u9lKtmwN1go?si=XBe4DOISulMkDCZM)
 
-
 This file dots still in pre-alpha status, and it's subject to a deadline. So I'm uploading it for the 5th Hyprland Ricing Competitions. This dotfile is also tested on Arch Linux OS, so for now it is only stable for Arch Linux and its derivatives.
 
 Installation 
@@ -13,6 +12,8 @@ Installation
 
 Type this on your terminal, and this script will automaticly installed the dots.
 
+## Layout Plan
+![Layout Plan](https://github.com/Sreetx/Sreetx-Neo/blob/master/Gambar%20yang%20ditempelkan.png?raw=true)
 
 # Features
 
